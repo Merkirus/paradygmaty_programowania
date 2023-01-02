@@ -18,3 +18,4 @@ let rec print_list xs =
 
 (* print_list (quicksort [2;1;5;2;4;6]);; *)
 print_list (quicksort' [2;1;5;2;4;6]);;
+print_list (quicksort' [2;2;5]);;

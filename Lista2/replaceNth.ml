@@ -2,7 +2,7 @@
 let rec repalceNth (xs, i, x) =
     match (xs, i, x) with
     | ([], _, _) -> []
-    | ((h :: t), 0, x) -> x :: repalceNth (t, -1, x)
+    | ((h :: t), 0, x) -> x :: t
     | ((h :: t), i, x) -> h :: repalceNth (t, i - 1, x);;
 
 let rec print_list xs =

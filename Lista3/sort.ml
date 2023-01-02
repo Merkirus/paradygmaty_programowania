@@ -14,8 +14,8 @@ let rec mergesort f xs =
     let halve xs =
         let rec inner_halve left right acc =
             match right, acc with
-            | _, 0 -> (left, right)
-            | h :: t, _ -> inner_halve (left @ [h]) t (acc - 1)
+            | _, 0 -> (List.rev left, right)
+            | h :: t, _ -> inner_halve (h :: left) t (acc - 1)
             | _, _ -> assert false
         in inner_halve [] xs ((List.length xs)/2)
     in let rec merge left right =
